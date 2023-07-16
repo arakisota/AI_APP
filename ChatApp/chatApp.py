@@ -27,7 +27,7 @@ def init_messages():
     履歴を削除
     """
     clear_button = st.sidebar.button("Clear Conversation", key="clear")
-    if clear_button or "message" not in st.session_state:
+    if clear_button or "messages" not in st.session_state:
         st.session_state.messages = [SystemMessage(content="You are a helpful assistant.")]
         st.session_state.costs = []
 
